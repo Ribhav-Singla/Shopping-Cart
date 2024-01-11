@@ -1,0 +1,87 @@
+/* Import all of Bootstrap's CSS */
+@import "bootstrap/scss/bootstrap";
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    color: white;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+}
+
+nav h2{
+    margin-left: 30px;
+}
+nav img{
+    margin-top: 8px;
+    margin-right: 30px ;
+}
+
+.item--container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.desc--container{
+    padding: 2px 20px;
+    width: 700px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 210px;
+}
+
+
+.qty-container{
+    display: flex;
+}
+
+.nav--cart{
+    position: relative;
+}
+
+.nav--cart div{
+    font-size: 18px;
+    position: absolute;
+    top: 3px;
+    left:36px;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.clear-cart{
+    margin-right: 20rem;
+}
+
+.clearCart--container{
+    height: 150px;
+    width: 300px;
+    background-color: lightgrey;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
