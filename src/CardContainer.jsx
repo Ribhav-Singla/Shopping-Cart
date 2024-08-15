@@ -37,11 +37,15 @@ export default function CardContainer(props) {
             data.length > 0 ?
                 (
                     <>  {clearCart && <ClearCart emptyCart={props.emptyCart} handleClearCart={handleClearCart}/>}
-                        {cartElements}
+                        <div className="item-cont">
+                            {cartElements}
+                        </div>
                         <hr />
-                        <div className="d-flex align-items-baseline justify-content-end flex-wrap">
+                        <div className="clear-cart-cont">
                             <button className="btn btn-outline-secondary clear-cart" onClick={handleClearCart}>Clear Cart</button>
-                            <p className="fw-semibold fs-5 text-end"> Subtotal ({totalQuantity} item): <span className="fs-6 fw-light">₹</span>{totalPrice+".00"}</p>
+                            <div className="subtotal-cont">
+                                <p className="fw-semibold fs-5 "> Subtotal ({totalQuantity} item): <span className="fs-6 fw-light">₹</span>{totalPrice+".00"}</p>
+                            </div>
                         </div>
 
                     </>
@@ -50,6 +54,7 @@ export default function CardContainer(props) {
                 (
                     <>
                         <h2 className="text-start mt-4" >Your Cart is empty.</h2>
+                        <button className="btn btn-primary" onClick={()=>window.location.reload()}>Shop now</button>
                         <hr />
                         <div>
                             <p className="fw-semibold fs-5 text-end"> Subtotal ({totalQuantity} item): <span className="fs-6 fw-light">₹</span>{totalPrice+".00"}</p>

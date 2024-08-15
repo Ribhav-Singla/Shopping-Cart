@@ -10,8 +10,11 @@ export default function CardItems(props){
         <>
             <hr />
             <div className="item--container">
-                <div>
+                <div className="image-container">
                     <img src={props.img}alt="" width="170px" height="180px" style={{marginLeft:"30px"}} />
+                    <div className="price-tag">
+                        <p className="fs-5 fw-semibold"><span className="fw-light fs-6">₹</span>{props.price+".00"}</p>
+                    </div>
                 </div>
 
                 <div className="desc--container">

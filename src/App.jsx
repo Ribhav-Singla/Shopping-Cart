@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import CardContainer from './CardContainer'
 import './App.css'
 import data from './data'
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         return item.id===id ? {...item , amount:item.amount+1} : item
       })
     })
+    toast.success('Added')
   }
   function decreaseItem(id){
     setCartData((prevCartData)=>{
@@ -41,6 +43,7 @@ function App() {
         return item.id===id ? {...item , amount:item.amount-1} : item
       })
     })
+    toast.success('Deleted')
   }
   function removeItem(id){
     setCartData((prevCartData)=>{
@@ -48,12 +51,14 @@ function App() {
         return item.id!==id
       })
     })
+    toast.success('Removed')
   }
 
 
   return (
     <>
       <main>
+        <Toaster/>
         <Navbar
                 totalQuantity={totalQuantity}
          />

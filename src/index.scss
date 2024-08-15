@@ -22,7 +22,7 @@ nav img{
 
 .item--container{
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     user-select: none;
 }
@@ -35,6 +35,10 @@ nav img{
     flex-direction: column;
     justify-content: space-between;
     margin-right: 210px;
+}
+
+.text-end{
+    margin-left: auto;
 }
 
 
@@ -59,7 +63,7 @@ nav img{
 }
 
 .clear-cart{
-    margin-right: 20rem;
+    margin-right: 0rem;
 }
 
 .clearCart--container{
@@ -84,4 +88,76 @@ nav img{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+    .price-tag{
+        display: none;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    .subtotal-cont{
+        margin-left: auto;
+    }
+
+    .clear-cart-cont{
+        display: flex;
+        align-items: baseline;
+    }
+
+  @media screen and (max-width:1250px) {
+    .desc--container{
+        width: 500px;
+    }
+    
+  }
+
+  @media screen and (max-width:1051px) {
+    .text-end{
+        display: none;
+    }
+    .price-tag{
+        display: block;
+    }
+  }
+
+  @media screen and (max-width:973px) {
+    .desc--container{
+        width: 450px;
+        margin-right: 25px;
+    }
+  }
+
+  @media screen and (max-width:739px) {
+    .desc--container{
+        width: 350px;
+        margin-right: 0px;
+    }
+  }
+
+  @media  screen and (max-width:613px) {
+    .desc--container{
+        width: 100%;
+    }
+    .image-container{
+        margin-inline: auto;
+    }
+    .image-container img{
+        width: 200px;
+        height: 210px;
+    }
+  }
+
+  @media screen and (max-width:480px) {
+    .clear-cart-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .subtotal-cont{
+        margin-left: 0;
+        margin-top: 10px;
+    }
   }
